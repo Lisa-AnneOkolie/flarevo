@@ -37,11 +37,14 @@
         --border-strong: rgba(124, 58, 237, 0.25);
         --serif: "DM Serif Display", Georgia, serif;
         --sans: "DM Sans", system-ui, sans-serif;
+        --nav-h: 72px;
       }
       html {
         scroll-behavior: smooth;
       }
       body {
+        display: flex;
+        flex-direction: column;
         font-family: var(--sans);
         background: var(--surface);
         color: var(--ink);
@@ -57,6 +60,7 @@
         left: 0;
         right: 0;
         z-index: 100;
+        height: var(--nav-h);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -102,6 +106,11 @@
       }
       .nav-cta:hover {
         opacity: 0.88;
+      }
+
+      .rest {
+        min-height: calc(100vh - var(--nav-h));
+        padding-top: var(--nav-h);
       }
 
       /* HERO */
@@ -918,54 +927,55 @@
       <a href="#contact-form" class="nav-cta">Work with us</a>
     </nav>
 
-    <div style="max-width: 1100px; margin: 0 auto; padding: 0 1vw">
-      <div class="hero">
-        <div class="hero-eyebrow">Strategic Management Services</div>
-        <h1>Your brand, built<br />with <em>intention.</em></h1>
-        <p class="hero-sub">
-          Flarevo helps businesses and personal brands grow through sharp
-          strategy, distinctive content, and brand direction that actually
-          converts.
-        </p>
-        <div class="hero-actions">
-          <a href="#contact-form" class="btn-primary">Start a project</a>
-          <a href="#services" class="btn-ghost">See what we do</a>
-        </div>
-        <div class="hero-stripe">
-          <div class="stripe-item">
-            <span class="stripe-num">Done for you</span
-            ><span class="stripe-label">Full execution</span>
+    <div class="rest">
+      <div style="max-width: 1100px; margin: 0 auto; padding: 0 1vw">
+        <div class="hero">
+          <div class="hero-eyebrow">Strategic Management Services</div>
+          <h1>Your brand, built<br />with <em>intention.</em></h1>
+          <p class="hero-sub">
+            Flarevo helps businesses and personal brands grow through sharp
+            strategy, distinctive content, and brand direction that actually
+            converts.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact-form" class="btn-primary">Start a project</a>
+            <a href="#services" class="btn-ghost">See what we do</a>
           </div>
-          <div class="stripe-div"></div>
-          <div class="stripe-item">
-            <span class="stripe-num">Consulting</span
-            ><span class="stripe-label">Strategy and guidance</span>
-          </div>
-          <div class="stripe-div"></div>
-          <div class="stripe-item">
-            <span class="stripe-num">Lagos, NG</span
-            ><span class="stripe-label">Serving clients globally</span>
+          <div class="hero-stripe">
+            <div class="stripe-item">
+              <span class="stripe-num">Done for you</span
+              ><span class="stripe-label">Full execution</span>
+            </div>
+            <div class="stripe-div"></div>
+            <div class="stripe-item">
+              <span class="stripe-num">Consulting</span
+              ><span class="stripe-label">Strategy and guidance</span>
+            </div>
+            <div class="stripe-div"></div>
+            <div class="stripe-item">
+              <span class="stripe-num">Lagos, NG</span
+              ><span class="stripe-label">Serving clients globally</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <section id="about">
-      <div class="about-grid">
-        <div>
-          <div class="section-label">About Flarevo</div>
-          <h2>Strategy that moves the needle.</h2>
-          <p>
-            Flarevo is a strategic management firm founded to help businesses
-            stop guessing and start growing. We combine brand audits, creative
-            direction, and content strategy into one cohesive approach.
-          </p>
-          <p>
-            Whether you are a startup building from scratch or an established
-            brand that needs a reset, we come in, assess what is working, and
-            build what is not.
-          </p>
-          <!-- <div class="social-bar">
+      <section id="about">
+        <div class="about-grid">
+          <div>
+            <div class="section-label">About Flarevo</div>
+            <h2>Strategy that moves the needle.</h2>
+            <p>
+              Flarevo is a strategic management firm founded to help businesses
+              stop guessing and start growing. We combine brand audits, creative
+              direction, and content strategy into one cohesive approach.
+            </p>
+            <p>
+              Whether you are a startup building from scratch or an established
+              brand that needs a reset, we come in, assess what is working, and
+              build what is not.
+            </p>
+            <!-- <div class="social-bar">
             <a
               href="https://instagram.com/flarevo"
               target="_blank"
@@ -1031,466 +1041,476 @@
               flarevostudio@gmail.com
             </a>
           </div> -->
-        </div>
-        <div class="about-visual">
-          <div class="about-tag">
-            "We don't just manage your brand, we engineer its direction."
           </div>
-          <ul class="about-list">
-            <li>
-              Mid-range pricing, professional quality, accessible investment
-            </li>
-            <li>Both done for you and consulting models available</li>
-            <li>Small businesses, personal brands, and corporate clients</li>
-            <li>Founded by Lisa-Anne Okolie, strategist and brand director</li>
-          </ul>
+          <div class="about-visual">
+            <div class="about-tag">
+              "We don't just manage your brand, we engineer its direction."
+            </div>
+            <ul class="about-list">
+              <li>
+                Mid-range pricing, professional quality, accessible investment
+              </li>
+              <li>Both done for you and consulting models available</li>
+              <li>Small businesses, personal brands, and corporate clients</li>
+              <li>
+                Founded by Lisa-Anne Okolie, strategist and brand director
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="services-bg" id="services">
-      <div class="services-inner">
-        <div class="section-label">What we do</div>
-        <h2>Six ways we grow<br />your brand.</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-num">01</div>
-            <div class="service-title">Brand Audit</div>
-            <p class="service-desc">
-              A full diagnostic of your brand's current position, identity,
-              messaging, digital presence, and competitive gap analysis.
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">Audit</span
-              ><span class="service-tag">Analysis</span
-              ><span class="service-tag">Report</span>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-num">02</div>
-            <div class="service-title">Social Media Management</div>
-            <p class="service-desc">
-              End to end management of your social presence including content
-              creation, scheduling, community engagement, and performance
-              reporting.
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">Instagram</span
-              ><span class="service-tag">Meta Ads</span
-              ><span class="service-tag">Strategy</span>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-num">03</div>
-            <div class="service-title">Content Strategy</div>
-            <p class="service-desc">
-              A content roadmap aligned to your business goals including content
-              pillars, editorial calendars, and channel specific direction.
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">Planning</span
-              ><span class="service-tag">Direction</span
-              ><span class="service-tag">Calendars</span>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-num">04</div>
-            <div class="service-title">Brand Strategy</div>
-            <p class="service-desc">
-              Positioning, voice, visual identity direction, and messaging
-              frameworks that make your brand instantly recognisable and
-              trusted.
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">Positioning</span
-              ><span class="service-tag">Voice</span
-              ><span class="service-tag">Identity</span>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-num">05</div>
-            <div class="service-title">Growth Strategy</div>
-            <p class="service-desc">
-              Data informed growth planning including paid and organic channel
-              strategy, audience development, and conversion optimisation.
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">Google Ads</span
-              ><span class="service-tag">Meta Ads</span
-              ><span class="service-tag">Growth</span>
-            </div>
-          </div>
-          <div class="service-card">
-            <div class="service-num">06</div>
-            <div class="service-title">Strategy Consulting</div>
-            <p class="service-desc">
-              Advisory engagements for founders and teams who need an outside
-              strategic mind, including workshops, planning sessions, and
-              ongoing guidance.
-            </p>
-            <div class="service-tags">
-              <span class="service-tag">Advisory</span
-              ><span class="service-tag">Workshops</span
-              ><span class="service-tag">Consulting</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section>
-      <div class="section-label">How it works</div>
-      <h2
-        style="
-          font-family: var(--serif);
-          font-size: clamp(1.8rem, 3vw, 2.4rem);
-          letter-spacing: -0.015em;
-          margin-bottom: 2.5rem;
-          line-height: 1.2;
-        "
-      >
-        Simple. Focused. Effective.
-      </h2>
-      <div class="process-grid">
-        <div class="process-step">
-          <div class="process-n">1</div>
-          <div class="process-title">Discovery call</div>
-          <p class="process-desc">
-            We learn about your business, goals, and what is not working. No
-            fluff, just clarity.
-          </p>
-        </div>
-        <div class="process-step">
-          <div class="process-n">2</div>
-          <div class="process-title">Audit and proposal</div>
-          <p class="process-desc">
-            We audit your current presence and deliver a tailored proposal with
-            scope, timeline, and pricing.
-          </p>
-        </div>
-        <div class="process-step">
-          <div class="process-n">3</div>
-          <div class="process-title">Strategy build</div>
-          <p class="process-desc">
-            We develop your strategy, content direction, and brand frameworks
-            ready for execution.
-          </p>
-        </div>
-        <div class="process-step">
-          <div class="process-n">4</div>
-          <div class="process-title">Execute and grow</div>
-          <p class="process-desc">
-            We execute, monitor, and refine with regular check ins and
-            performance reporting.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="packages">
-      <div class="section-label">Packages</div>
-      <h2
-        style="
-          font-family: var(--serif);
-          font-size: clamp(1.8rem, 3vw, 2.4rem);
-          letter-spacing: -0.015em;
-          line-height: 1.2;
-        "
-      >
-        Choose your engagement.
-      </h2>
-      <p style="color: var(--ink-muted); font-weight: 300; margin-top: 0.5rem">
-        All prices are starting points. Custom scopes available on request.
-      </p>
-      <div class="packages-grid">
-        <div class="package-card">
-          <div class="pkg-name">Starter</div>
-          <div class="pkg-sub">For new brands and small businesses</div>
-          <div class="pkg-price">₦100,000 <span>/ month</span></div>
-          <ul class="pkg-features">
-            <li>Social media management (2 platforms)</li>
-            <li>12 posts per month</li>
-            <li>Basic content strategy</li>
-            <li>Monthly performance report</li>
-            <li>1 strategy session per month</li>
-          </ul>
-          <a
-            href="#"
-            class="pkg-cta"
-            onclick="
-              openWA('starter');
-              return false;
-            "
-            >Get started</a
-          >
-        </div>
-        <div class="package-card featured">
-          <div class="pkg-badge">Most popular</div>
-          <div class="pkg-name">Growth</div>
-          <div class="pkg-sub">For brands ready to scale</div>
-          <div class="pkg-price">₦150,000 <span>/ month</span></div>
-          <ul class="pkg-features">
-            <li>Social media management (3 platforms)</li>
-            <li>20 posts and stories per month</li>
-            <li>Full content and brand strategy</li>
-            <li>Paid ads management (Meta and Google)</li>
-            <li>Brand audit included</li>
-            <li>Bi-weekly strategy sessions</li>
-            <li>Performance dashboard</li>
-          </ul>
-          <a
-            href="#"
-            class="pkg-cta"
-            onclick="
-              openWA('growth');
-              return false;
-            "
-            >Get started</a
-          >
-        </div>
-        <div class="package-card">
-          <div class="pkg-name">Advisory</div>
-          <div class="pkg-sub">Consulting and strategy only</div>
-          <div class="pkg-price">₦50,000 <span>/ session</span></div>
-          <ul class="pkg-features">
-            <li>90 minute strategy session</li>
-            <li>Brand or content audit</li>
-            <li>Written strategy document</li>
-            <li>30 day follow up support</li>
-            <li>Retainer available on request</li>
-          </ul>
-          <a
-            href="#"
-            class="pkg-cta"
-            onclick="
-              openWA('advisory');
-              return false;
-            "
-            >Book a session</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <div class="testi-bg" id="testimonials">
-      <div class="testi-inner">
-        <div class="section-label">Testimonials</div>
-        <h2>What our clients say.</h2>
-        <div class="testi-grid">
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">
-              Flarevo completely transformed how we show up online. Our
-              engagement tripled within the first two months and we finally have
-              a brand that feels like us.
-            </p>
-            <div class="testi-author">
-              <div class="testi-avatar">A</div>
-              <div>
-                <div class="testi-name">Adaeze Nwosu</div>
-                <div class="testi-role">Founder, Bloom Skincare</div>
+      <div class="services-bg" id="services">
+        <div class="services-inner">
+          <div class="section-label">What we do</div>
+          <h2>Six ways we grow<br />your brand.</h2>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-num">01</div>
+              <div class="service-title">Brand Audit</div>
+              <p class="service-desc">
+                A full diagnostic of your brand's current position, identity,
+                messaging, digital presence, and competitive gap analysis.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Audit</span
+                ><span class="service-tag">Analysis</span
+                ><span class="service-tag">Report</span>
               </div>
             </div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">
-              The strategy session alone was worth every kobo. Lisa-Anne gave us
-              clarity we had been chasing for months. We walked out with a real
-              plan.
-            </p>
-            <div class="testi-author">
-              <div class="testi-avatar">K</div>
-              <div>
-                <div class="testi-name">Kelechi Eze</div>
-                <div class="testi-role">CEO, TechBridge Lagos</div>
+            <div class="service-card">
+              <div class="service-num">02</div>
+              <div class="service-title">Social Media Management</div>
+              <p class="service-desc">
+                End to end management of your social presence including content
+                creation, scheduling, community engagement, and performance
+                reporting.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Instagram</span
+                ><span class="service-tag">Meta Ads</span
+                ><span class="service-tag">Strategy</span>
               </div>
             </div>
-          </div>
-          <div class="testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-quote">
-              Working with Flarevo felt like having a full marketing team in our
-              corner. Professional, creative, and genuinely invested in our
-              growth.
-            </p>
-            <div class="testi-author">
-              <div class="testi-avatar">T</div>
-              <div>
-                <div class="testi-name">Temi Adeyemo</div>
-                <div class="testi-role">Personal Brand Coach</div>
+            <div class="service-card">
+              <div class="service-num">03</div>
+              <div class="service-title">Content Strategy</div>
+              <p class="service-desc">
+                A content roadmap aligned to your business goals including
+                content pillars, editorial calendars, and channel specific
+                direction.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Planning</span
+                ><span class="service-tag">Direction</span
+                ><span class="service-tag">Calendars</span>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-num">04</div>
+              <div class="service-title">Brand Strategy</div>
+              <p class="service-desc">
+                Positioning, voice, visual identity direction, and messaging
+                frameworks that make your brand instantly recognisable and
+                trusted.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Positioning</span
+                ><span class="service-tag">Voice</span
+                ><span class="service-tag">Identity</span>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-num">05</div>
+              <div class="service-title">Growth Strategy</div>
+              <p class="service-desc">
+                Data informed growth planning including paid and organic channel
+                strategy, audience development, and conversion optimisation.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Google Ads</span
+                ><span class="service-tag">Meta Ads</span
+                ><span class="service-tag">Growth</span>
+              </div>
+            </div>
+            <div class="service-card">
+              <div class="service-num">06</div>
+              <div class="service-title">Strategy Consulting</div>
+              <p class="service-desc">
+                Advisory engagements for founders and teams who need an outside
+                strategic mind, including workshops, planning sessions, and
+                ongoing guidance.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Advisory</span
+                ><span class="service-tag">Workshops</span
+                ><span class="service-tag">Consulting</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="cta-banner" id="contact">
-      <h2>Ready to build something real?</h2>
-      <p>
-        Let's have a conversation about where your brand is and where it needs
-        to go.
-      </p>
-      <a href="#contact-form" class="btn-white">Fill in the contact form</a>
-      <a
-        href="https://wa.me/2348148873623?text=Hi%20Flarevo%2C%20I%27d%20like%20to%20discuss%20a%20project"
-        target="_blank"
-        class="btn-outline-white"
-        >or chat on WhatsApp</a
-      >
-    </div>
+      <section>
+        <div class="section-label">How it works</div>
+        <h2
+          style="
+            font-family: var(--serif);
+            font-size: clamp(1.8rem, 3vw, 2.4rem);
+            letter-spacing: -0.015em;
+            margin-bottom: 2.5rem;
+            line-height: 1.2;
+          "
+        >
+          Simple. Focused. Effective.
+        </h2>
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="process-n">1</div>
+            <div class="process-title">Discovery call</div>
+            <p class="process-desc">
+              We learn about your business, goals, and what is not working. No
+              fluff, just clarity.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="process-n">2</div>
+            <div class="process-title">Audit and proposal</div>
+            <p class="process-desc">
+              We audit your current presence and deliver a tailored proposal
+              with scope, timeline, and pricing.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="process-n">3</div>
+            <div class="process-title">Strategy build</div>
+            <p class="process-desc">
+              We develop your strategy, content direction, and brand frameworks
+              ready for execution.
+            </p>
+          </div>
+          <div class="process-step">
+            <div class="process-n">4</div>
+            <div class="process-title">Execute and grow</div>
+            <p class="process-desc">
+              We execute, monitor, and refine with regular check ins and
+              performance reporting.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <a
-      href="https://wa.me/2348148873623?text=Hi%20Flarevo%2C%20I%27d%20like%20to%20discuss%20a%20project"
-      target="_blank"
-      class="wa-float"
-      aria-label="Chat on WhatsApp"
-    >
-      <span class="wa-tooltip">Chat on WhatsApp</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="white"
-      >
-        <path
-          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-        />
-      </svg>
-    </a>
-
-    <div class="form-section" id="contact-form">
-      <div class="form-inner">
-        <div class="section-label">Get in touch</div>
+      <section id="packages">
+        <div class="section-label">Packages</div>
         <h2
           style="
             font-family: var(--serif);
             font-size: clamp(1.8rem, 3vw, 2.4rem);
             letter-spacing: -0.015em;
             line-height: 1.2;
-            margin-bottom: 0.5rem;
           "
         >
-          Let's talk about your brand.
+          Choose your engagement.
         </h2>
-        <p style="color: var(--ink-muted); font-weight: 300; font-size: 1rem">
-          Fill in the form and we will get back to you within 24 hours.
+        <p
+          style="color: var(--ink-muted); font-weight: 300; margin-top: 0.5rem"
+        >
+          All prices are starting points. Custom scopes available on request.
         </p>
-        <form id="contactForm" class="form-grid" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label>Your name</label
-            ><input
-              type="text"
-              id="fname"
-              placeholder="e.g. Amaka Obi"
-              required
-            />
+        <div class="packages-grid">
+          <div class="package-card">
+            <div class="pkg-name">Starter</div>
+            <div class="pkg-sub">For new brands and small businesses</div>
+            <div class="pkg-price">₦100,000 <span>/ month</span></div>
+            <ul class="pkg-features">
+              <li>Social media management (2 platforms)</li>
+              <li>12 posts per month</li>
+              <li>Basic content strategy</li>
+              <li>Monthly performance report</li>
+              <li>1 strategy session per month</li>
+            </ul>
+            <a
+              href="#"
+              class="pkg-cta"
+              onclick="
+                openWA('starter');
+                return false;
+              "
+              >Get started</a
+            >
           </div>
-          <div class="form-group">
-            <label>Email address</label
-            ><input
-              type="email"
-              id="femail"
-              placeholder="you@example.com"
-              required
-            />
+          <div class="package-card featured">
+            <div class="pkg-badge">Most popular</div>
+            <div class="pkg-name">Growth</div>
+            <div class="pkg-sub">For brands ready to scale</div>
+            <div class="pkg-price">₦150,000 <span>/ month</span></div>
+            <ul class="pkg-features">
+              <li>Social media management (3 platforms)</li>
+              <li>20 posts and stories per month</li>
+              <li>Full content and brand strategy</li>
+              <li>Paid ads management (Meta and Google)</li>
+              <li>Brand audit included</li>
+              <li>Bi-weekly strategy sessions</li>
+              <li>Performance dashboard</li>
+            </ul>
+            <a
+              href="#"
+              class="pkg-cta"
+              onclick="
+                openWA('growth');
+                return false;
+              "
+              >Get started</a
+            >
           </div>
-          <div class="form-group">
-            <label>WhatsApp / Phone</label
-            ><input type="tel" id="fphone" placeholder="08XXXXXXXXX" />
+          <div class="package-card">
+            <div class="pkg-name">Advisory</div>
+            <div class="pkg-sub">Consulting and strategy only</div>
+            <div class="pkg-price">₦50,000 <span>/ session</span></div>
+            <ul class="pkg-features">
+              <li>90 minute strategy session</li>
+              <li>Brand or content audit</li>
+              <li>Written strategy document</li>
+              <li>30 day follow up support</li>
+              <li>Retainer available on request</li>
+            </ul>
+            <a
+              href="#"
+              class="pkg-cta"
+              onclick="
+                openWA('advisory');
+                return false;
+              "
+              >Book a session</a
+            >
           </div>
-          <div class="form-group">
-            <label>Service interested in</label>
-            <select id="fservice" required>
-              <option value="" disabled selected>Select a service</option>
-              <option>Social Media Management</option>
-              <option>Brand Audit</option>
-              <option>Content Strategy</option>
-              <option>Brand Strategy</option>
-              <option>Growth Strategy</option>
-              <option>Strategy Consulting</option>
-              <option>Not sure yet, let's talk</option>
-            </select>
-          </div>
-          <div class="form-group full">
-            <label>Tell us about your project</label
-            ><textarea
-              id="fmsg"
-              rows="4"
-              placeholder="What is your brand, what are you trying to achieve, and what is not working right now?"
-              required
-            ></textarea>
-          </div>
-          <div class="form-group full">
-            <button type="submit" class="form-submit" id="submitBtn">
-              Send enquiry
-            </button>
-            <div class="form-success" id="formSuccess">
-              Message sent! We will be in touch within 24 hours. You can also
-              reach us directly on WhatsApp.
+        </div>
+      </section>
+
+      <div class="testi-bg" id="testimonials">
+        <div class="testi-inner">
+          <div class="section-label">Testimonials</div>
+          <h2>What our clients say.</h2>
+          <div class="testi-grid">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">
+                Flarevo completely transformed how we show up online. Our
+                engagement tripled within the first two months and we finally
+                have a brand that feels like us.
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">A</div>
+                <div>
+                  <div class="testi-name">Adaeze Nwosu</div>
+                  <div class="testi-role">Founder, Bloom Skincare</div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">
+                The strategy session alone was worth every kobo. Lisa-Anne gave
+                us clarity we had been chasing for months. We walked out with a
+                real plan.
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">K</div>
+                <div>
+                  <div class="testi-name">Kelechi Eze</div>
+                  <div class="testi-role">CEO, TechBridge Lagos</div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">
+                Working with Flarevo felt like having a full marketing team in
+                our corner. Professional, creative, and genuinely invested in
+                our growth.
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">T</div>
+                <div>
+                  <div class="testi-name">Temi Adeyemo</div>
+                  <div class="testi-role">Personal Brand Coach</div>
+                </div>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-top">
-        <div>
-          <img
-            src="flarevo-logo.png"
-            alt="Flarevo"
-            style="height: 44px; width: auto; margin-bottom: 0.75rem"
-          />
-          <p class="footer-tagline">
-            Strategic Management Services. Lagos, Nigeria. Serving clients
-            globally.
-          </p>
         </div>
-        <div>
-          <p
+      </div>
+
+      <div class="cta-banner" id="contact">
+        <h2>Ready to build something real?</h2>
+        <p>
+          Let's have a conversation about where your brand is and where it needs
+          to go.
+        </p>
+        <a href="#contact-form" class="btn-white">Fill in the contact form</a>
+        <a
+          href="https://wa.me/2348148873623?text=Hi%20Flarevo%2C%20I%27d%20like%20to%20discuss%20a%20project"
+          target="_blank"
+          class="btn-outline-white"
+          >or chat on WhatsApp</a
+        >
+      </div>
+
+      <a
+        href="https://wa.me/2348148873623?text=Hi%20Flarevo%2C%20I%27d%20like%20to%20discuss%20a%20project"
+        target="_blank"
+        class="wa-float"
+        aria-label="Chat on WhatsApp"
+      >
+        <span class="wa-tooltip">Chat on WhatsApp</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="white"
+        >
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+          />
+        </svg>
+      </a>
+
+      <div class="form-section" id="contact-form">
+        <div class="form-inner">
+          <div class="section-label">Get in touch</div>
+          <h2
             style="
-              font-size: 0.78rem;
-              color: rgba(255, 255, 255, 0.4);
-              margin-bottom: 0.75rem;
-              letter-spacing: 0.06em;
-              text-transform: uppercase;
+              font-family: var(--serif);
+              font-size: clamp(1.8rem, 3vw, 2.4rem);
+              letter-spacing: -0.015em;
+              line-height: 1.2;
+              margin-bottom: 0.5rem;
             "
           >
-            Follow us
+            Let's talk about your brand.
+          </h2>
+          <p style="color: var(--ink-muted); font-weight: 300; font-size: 1rem">
+            Fill in the form and we will get back to you within 24 hours.
           </p>
-          <div class="footer-socials">
-            <a
-              href="https://instagram.com/flarevo"
-              target="_blank"
-              class="footer-social"
-              >Instagram</a
-            >
-            <a
-              href="https://twitter.com/flarevo"
-              target="_blank"
-              class="footer-social"
-              >Twitter</a
-            >
-            <a
-              href="https://linkedin.com/company/flarevo"
-              target="_blank"
-              class="footer-social"
-              >LinkedIn</a
-            >
-            <a href="mailto:flarevostudio@gmail.com" class="footer-social"
-              >Email us</a
-            >
-          </div>
+          <form
+            id="contactForm"
+            class="form-grid"
+            onsubmit="handleSubmit(event)"
+          >
+            <div class="form-group">
+              <label>Your name</label
+              ><input
+                type="text"
+                id="fname"
+                placeholder="e.g. Amaka Obi"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Email address</label
+              ><input
+                type="email"
+                id="femail"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>WhatsApp / Phone</label
+              ><input type="tel" id="fphone" placeholder="08XXXXXXXXX" />
+            </div>
+            <div class="form-group">
+              <label>Service interested in</label>
+              <select id="fservice" required>
+                <option value="" disabled selected>Select a service</option>
+                <option>Social Media Management</option>
+                <option>Brand Audit</option>
+                <option>Content Strategy</option>
+                <option>Brand Strategy</option>
+                <option>Growth Strategy</option>
+                <option>Strategy Consulting</option>
+                <option>Not sure yet, let's talk</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>Tell us about your project</label
+              ><textarea
+                id="fmsg"
+                rows="4"
+                placeholder="What is your brand, what are you trying to achieve, and what is not working right now?"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group full">
+              <button type="submit" class="form-submit" id="submitBtn">
+                Send enquiry
+              </button>
+              <div class="form-success" id="formSuccess">
+                Message sent! We will be in touch within 24 hours. You can also
+                reach us directly on WhatsApp.
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 Flarevo. All rights reserved.</p>
-        <p>flarevostudio@gmail.com</p>
-      </div>
-    </footer>
+
+      <footer>
+        <div class="footer-top">
+          <div>
+            <img
+              src="flarevo-logo.png"
+              alt="Flarevo"
+              style="height: 44px; width: auto; margin-bottom: 0.75rem"
+            />
+            <p class="footer-tagline">
+              Strategic Management Services. Lagos, Nigeria. Serving clients
+              globally.
+            </p>
+          </div>
+          <div>
+            <p
+              style="
+                font-size: 0.78rem;
+                color: rgba(255, 255, 255, 0.4);
+                margin-bottom: 0.75rem;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+              "
+            >
+              Follow us
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://instagram.com/flarevo"
+                target="_blank"
+                class="footer-social"
+                >Instagram</a
+              >
+              <a
+                href="https://twitter.com/flarevo"
+                target="_blank"
+                class="footer-social"
+                >Twitter</a
+              >
+              <a
+                href="https://linkedin.com/company/flarevo"
+                target="_blank"
+                class="footer-social"
+                >LinkedIn</a
+              >
+              <a href="mailto:flarevostudio@gmail.com" class="footer-social"
+                >Email us</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Flarevo. All rights reserved.</p>
+          <p>flarevostudio@gmail.com</p>
+        </div>
+      </footer>
+    </div>
 
     <script>
       var waMessages = {
