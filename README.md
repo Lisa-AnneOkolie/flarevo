@@ -411,7 +411,7 @@
       <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:0.75rem;letter-spacing:0.06em;text-transform:uppercase;">Follow us</p>
       <div class="footer-socials">
         <a href="https://instagram.com/flarevo" target="_blank" class="footer-social">Instagram</a>
-        <a href="https://twitter.com/flarevo" target="_blank" class="footer-social">Twitter</a>
+        <a href="https://twitter.com/theflarevo" target="_blank" class="footer-social">Twitter</a>
         <a href="https://linkedin.com/company/flarevo" target="_blank" class="footer-social">LinkedIn</a>
         <a href="mailto:flarevostudio@gmail.com" class="footer-social">Email us</a>
       </div>
