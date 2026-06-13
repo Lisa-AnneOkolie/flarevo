@@ -425,9 +425,9 @@
 
 <script>
 var waMessages = {
-  starter: "Hi Flarevo! I am interested in the *Starter Package* (₦100,000/month).\n\nCould you share more details and let me know how we can get started?",
-  growth: "Hi Flarevo! I am interested in the *Growth Package* (₦150,000/month).\n\nI am looking to scale my brand and would love to discuss next steps. When can we talk?",
-  advisory: "Hi Flarevo! I would like to book an *Advisory Session* (₦50,000/session).\n\nCould you let me know your available dates so we can schedule a call?"
+  starter: "Hi Flarevo! I am interested in the Starter Package (₦100,000/month).\n\nCould you share more details and let me know how we can get started?",
+  growth: "Hi Flarevo! I am interested in the Growth Package (₦150,000/month).\n\nI am looking to scale my brand and would love to discuss next steps. When can we talk?",
+  advisory: "Hi Flarevo! I would like to book an Advisory Session (₦50,000/session).\n\nCould you let me know your available dates so we can schedule a call?"
 };
 
 function openWA(pkg) {
